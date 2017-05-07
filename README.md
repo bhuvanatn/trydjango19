@@ -1,4 +1,4 @@
-# trydjango19
+# Django/Python Blog Project
 <h4> Getting Started with Django/Python</h4>
 
 This is Blog Project being build in Django.

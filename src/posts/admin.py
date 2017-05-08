@@ -12,7 +12,7 @@ class PostModelAdmin(admin.ModelAdmin):
         list_display_links = ["updated"]
         list_editable =["title"]
         list_filter = ["timestamp", "title"]
-        search_fields = [ "content"]
+        search_fields = ["content"]
         class Meta:
             model = Post
 

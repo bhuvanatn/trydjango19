@@ -3,9 +3,12 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from .models import Post
 # Create your views here.
 def post_list(request):
+    queryset = Post.objects.all()
     context = {
+        "object_list": queryset,
         "title" : "List"
     }
     # if request.user.is_authenticated():

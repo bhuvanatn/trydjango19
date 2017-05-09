@@ -1,1 +1,10 @@
 <h1>{{title}} OH God I am in templates!!!!</h1>
+<h4>
+{% for obj in object_list %}
+  {{obj.id}}<br/>
+  {{obj.title}}<br/>
+  {{obj.content}}<br/>
+  {{obj.timestamp}}<br/>
+  {{obj.updated}}<br/>
+{% endfor %}
+</h4>

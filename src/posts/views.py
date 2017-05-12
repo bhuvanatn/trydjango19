@@ -24,9 +24,9 @@ def post_list(request):
 def post_create(request):
     return HttpResponse("<h1>Create</h1>")
 
-def post_detail(request):
+def post_detail(request, id):
     # instance = Post.objects.get(id=4)
-    instance = get_object_or_404(Post, id = 1)
+    instance = get_object_or_404(Post, id = id)
     context = {
         "instance": instance,
         "title" : "Detaili9999",

@@ -1,16 +1,16 @@
 <h3>Post Detail Page</h3>
-
 {% if messages %}
 <ul class="messages">
     {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+            {% if "html_safe" in message.tags %} {{message|safe}} {%else%} {{ message }} {% endif %}
+        </li>
     {% endfor %}
 </ul>
 {% endif %}
 
-
-ID : {{instance.id}}<br/>
-Title : {{instance.title}}<br/>
-Content : {{instance.content}}<br/>
-Timestamp : {{instance.timestamp}}<br/>
-Updated : {{instance.updated}}<br/>
+ID :         {{instance.id}}<br/>
+Title :      {{instance.title}}<br/>
+Content :    {{instance.content}}<br/>
+Timestamp :  {{instance.timestamp}}<br/>
+Updated :    {{instance.updated}}<br/>

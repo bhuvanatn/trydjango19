@@ -42,9 +42,8 @@ def post_update(request, id =None):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
-        messages.success(request, "Successfully Edited")
+        messages.success(request, "<a href='#'>Successfully </a> Edited", extra_tags='html_safe')
         return HttpResponseRedirect(instance.get_absolute_url())
-        messages.success(request, "Not Edited")
     context = {
         "title": instance.title,
         "form": form,
